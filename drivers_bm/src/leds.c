@@ -9,7 +9,8 @@
 #define RGBMAGENTA 6
 #define RGBAMARILLO 7
 #define RGBAZUL 8
-#define RGBAMARILLO 9
+#define RGBVERDE 9
+#define RGBROJO 10
 
 int getVerde(){return VERDE;}
 int getRojo(){return ROJO;}
@@ -63,10 +64,15 @@ int PrenderLED(int LED, int COLOR){
 		  break;
 	case RGB:
 		switch(COLOR){
-		case RGBAZUL:
-
+		case RGBROJO:
+			Chip_GPIO_SetPinOutHigh(LPC_GPIO_PORT, 5, 0);
 			break;
-		case RGB
+		case RGBVERDE:
+			Chip_GPIO_SetPinOutHigh(LPC_GPIO_PORT, 5, 1);
+			break;
+		case RGBAZUL:
+			Chip_GPIO_SetPinOutHigh(LPC_GPIO_PORT, 5, 2);
+			break;
 		case RGBBLANCO:
 			Chip_GPIO_SetPinOutHigh(LPC_GPIO_PORT, 5, 0);
 			Chip_GPIO_SetPinOutHigh(LPC_GPIO_PORT, 5, 1);
