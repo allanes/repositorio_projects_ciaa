@@ -1,5 +1,7 @@
 #include "teclas.h"
 
+
+
 void InicializarBotones(){
 	//mapeo sin glitch (hay que hacer antirrebote por separado)
 //	Chip_SCU_PinMux(1,0,MD_PUP|MD_EZI|MD_ZI,FUNC0); //mapea 1.0 a GPIO0[4] (pulsador 1)

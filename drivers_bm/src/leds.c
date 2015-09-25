@@ -134,6 +134,15 @@ void ParpadearLED(int LED, int COLOR){
 
 }
 
+void ToggleLED(int LED){ //no vale para ledRGB
+	switch (LED){
+	case AMARILLO: Chip_GPIO_SetPinToggle(LPC_GPIO_PORT, 0, 14); break;
+	case VERDE: Chip_GPIO_SetPinToggle(LPC_GPIO_PORT, 1, 12); break;
+	case ROJO: Chip_GPIO_SetPinToggle(LPC_GPIO_PORT, 1, 11); break;
+	default: break;
+	}
+}
+
 void ApagarLEDS(){
 	Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, 1, 12); //VERDE
 	Chip_GPIO_SetPinOutLow(LPC_GPIO_PORT, 0, 14); //ROJO

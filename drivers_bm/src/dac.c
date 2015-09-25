@@ -7,3 +7,7 @@ void InicializarDAC(void){
 	Chip_DAC_UpdateValue(LPC_DAC, 0);
 	Chip_DAC_ConfigDAConverterControl (LPC_DAC, DAC_DMA_ENA);
 }
+
+void setDAC(uint16_t valor_adc){
+	Chip_DAC_UpdateValue(LPC_DAC, valor_adc); //hace cast de int16 a int32
+}

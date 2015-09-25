@@ -10,3 +10,7 @@ void InicializarTimer(int tiempo){
 void setPeriodo(int periodo){
 	Chip_RIT_SetTimerInterval(LPC_RITIMER, periodo); //seteo tiempo
 }
+
+void ReiniciarTimer(void){
+	Chip_RIT_ClearInt(LPC_RITIMER);
+}

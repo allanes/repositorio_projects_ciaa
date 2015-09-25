@@ -15,6 +15,7 @@ void InicializarLEDS(void);
 int PrenderLED(int LED, int COLOR);
 int ApagarLED(int LED);
 void ParpadearLED(int LED, int COLOR);
+void ToggleLED(int LED);
 
 void PrenderLEDS(void);
 void ApagarLEDS(void);

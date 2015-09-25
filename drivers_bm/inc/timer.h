@@ -6,5 +6,6 @@
 
 void InicializarTimer(int tiempo);
 void setPeriodo(int periodo);
+void ReiniciarTimer(void);
 
 #endif /* TIMER_H_ */
